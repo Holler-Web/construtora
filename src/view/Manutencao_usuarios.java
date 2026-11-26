@@ -15,6 +15,11 @@ public class Manutencao_usuarios extends javax.swing.JFrame {
      */
     public Manutencao_usuarios() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Incluir_usuario::new));
+        jButton2.addActionListener(e -> Navigation.abrir(this, Consultar_usuario::new));
+        jButton3.addActionListener(e -> Navigation.abrir(this, Alterar_usuario::new));
+        jButton4.addActionListener(e -> Navigation.abrir(this, Excluir_usuario::new));
+        jButton5.addActionListener(e -> Navigation.abrir(this, Telainicial::new));
     }
 
     /**

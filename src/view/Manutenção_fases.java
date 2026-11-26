@@ -15,6 +15,11 @@ public class Manutenção_fases extends javax.swing.JFrame {
      */
     public Manutenção_fases() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Inclusao_fase::new));
+        jButton2.addActionListener(e -> Navigation.abrir(this, Consulta_fase::new));
+        jButton3.addActionListener(e -> Navigation.abrir(this, Alterar_fases::new));
+        jButton4.addActionListener(e -> Navigation.abrir(this, Excluir_fase::new));
+        jButton5.addActionListener(e -> Navigation.abrir(this, Telainicial::new));
     }
 
     /**

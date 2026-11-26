@@ -15,6 +15,7 @@ public class Incluir_funcao extends javax.swing.JFrame {
      */
     public Incluir_funcao() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_funcoes::new));
     }
 
     /**

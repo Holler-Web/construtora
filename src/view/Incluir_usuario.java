@@ -15,6 +15,7 @@ public class Incluir_usuario extends javax.swing.JFrame {
      */
     public Incluir_usuario() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_usuarios::new));
     }
 
     /**

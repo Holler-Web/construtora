@@ -15,6 +15,7 @@ public class Alterar_funcao extends javax.swing.JFrame {
      */
     public Alterar_funcao() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_funcoes::new));
     }
 
     /**

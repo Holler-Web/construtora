@@ -15,6 +15,11 @@ public class Telainicial extends javax.swing.JFrame {
      */
     public Telainicial() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutenção_fases::new));
+        jButton2.addActionListener(e -> Navigation.abrir(this, Manutencao_engenheiros::new));
+        jButton3.addActionListener(e -> Navigation.abrir(this, Manutencao_funcoes::new));
+        jButton4.addActionListener(e -> Navigation.abrir(this, Manutencao_usuarios::new));
+        jButton5.addActionListener(e -> Navigation.abrir(this, Acesso::new));
     }
 
     /**

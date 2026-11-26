@@ -15,6 +15,11 @@ public class Manutencao_engenheiros extends javax.swing.JFrame {
      */
     public Manutencao_engenheiros() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, incluir_engenheiros::new));
+        jButton2.addActionListener(e -> Navigation.abrir(this, Consultar_engenheiro::new));
+        jButton3.addActionListener(e -> Navigation.abrir(this, Alterar_engenheiros::new));
+        jButton4.addActionListener(e -> Navigation.abrir(this, Excluir_engenheiro::new));
+        jButton5.addActionListener(e -> Navigation.abrir(this, Telainicial::new));
     }
 
     /**

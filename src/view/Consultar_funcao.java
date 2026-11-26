@@ -15,6 +15,7 @@ public class Consultar_funcao extends javax.swing.JFrame {
      */
     public Consultar_funcao() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_funcoes::new));
     }
 
     /**

@@ -15,6 +15,7 @@ public class Consultar_usuario extends javax.swing.JFrame {
      */
     public Consultar_usuario() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_usuarios::new));
     }
 
     /**

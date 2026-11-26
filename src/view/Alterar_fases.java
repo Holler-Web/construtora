@@ -15,6 +15,7 @@ public class Alterar_fases extends javax.swing.JFrame {
      */
     public Alterar_fases() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutenção_fases::new));
     }
 
     /**

@@ -15,6 +15,7 @@ public class Consulta_fase extends javax.swing.JFrame {
      */
     public Consulta_fase() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutenção_fases::new));
     }
 
     /**

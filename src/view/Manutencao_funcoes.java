@@ -15,6 +15,11 @@ public class Manutencao_funcoes extends javax.swing.JFrame {
      */
     public Manutencao_funcoes() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Incluir_funcao::new));
+        jButton2.addActionListener(e -> Navigation.abrir(this, Consultar_funcao::new));
+        jButton3.addActionListener(e -> Navigation.abrir(this, Alterar_funcao::new));
+        jButton4.addActionListener(e -> Navigation.abrir(this, Excluir_função::new));
+        jButton5.addActionListener(e -> Navigation.abrir(this, Telainicial::new));
     }
 
     /**

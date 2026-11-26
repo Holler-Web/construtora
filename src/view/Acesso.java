@@ -15,6 +15,8 @@ public class Acesso extends javax.swing.JFrame {
      */
     public Acesso() {
         initComponents();
+        jTextField1.addActionListener(e -> Navigation.abrir(this, Telainicial::new));
+        jTextField2.addActionListener(e -> Navigation.abrir(this, Telainicial::new));
     }
 
     /**

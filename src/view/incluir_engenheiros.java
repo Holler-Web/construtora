@@ -15,6 +15,7 @@ public class incluir_engenheiros extends javax.swing.JFrame {
      */
     public incluir_engenheiros() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_engenheiros::new));
     }
 
     /**
