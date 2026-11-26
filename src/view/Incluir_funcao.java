@@ -15,6 +15,12 @@ public class Incluir_funcao extends javax.swing.JFrame {
      */
     public Incluir_funcao() {
         initComponents();
+        jButton2.addActionListener(e -> {
+            if (FormSupport.camposObrigatorios(this, new String[]{"Descrição da função"}, jTextField1)) {
+                FormSupport.informarPersistenciaPendente(this);
+            }
+        });
+        jButton3.addActionListener(e -> FormSupport.limpar(jTextField1));
         jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_funcoes::new));
     }
 

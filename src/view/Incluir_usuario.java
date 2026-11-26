@@ -128,7 +128,13 @@ public class Incluir_usuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
+        if (!FormSupport.camposObrigatorios(this,
+                new String[]{"Nome", "E-mail", "Senha"}, jTextField1, jTextField2, jTextField3)) {
+            return;
+        }
+        if (FormSupport.emailValido(this, jTextField2)) {
+            FormSupport.informarPersistenciaPendente(this);
+        }
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**

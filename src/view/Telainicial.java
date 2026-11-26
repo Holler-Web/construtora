@@ -15,6 +15,13 @@ public class Telainicial extends javax.swing.JFrame {
      */
     public Telainicial() {
         initComponents();
+        javax.swing.JMenu menu = new javax.swing.JMenu("Cadastros complementares");
+        javax.swing.JMenuItem item = new javax.swing.JMenuItem("Obras, equipe e orçamento");
+        item.addActionListener(e -> new ComplementaryMaintenance().setVisible(true));
+        menu.add(item);
+        javax.swing.JMenuBar menuBar = new javax.swing.JMenuBar();
+        menuBar.add(menu);
+        setJMenuBar(menuBar);
         jButton1.addActionListener(e -> Navigation.abrir(this, Manutenção_fases::new));
         jButton2.addActionListener(e -> Navigation.abrir(this, Manutencao_engenheiros::new));
         jButton3.addActionListener(e -> Navigation.abrir(this, Manutencao_funcoes::new));

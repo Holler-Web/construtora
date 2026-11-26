@@ -15,6 +15,12 @@ public class Inclusao_fase extends javax.swing.JFrame {
      */
     public Inclusao_fase() {
         initComponents();
+        jButton2.addActionListener(e -> {
+            if (FormSupport.camposObrigatorios(this, new String[]{"Descrição da fase"}, jTextField1)) {
+                FormSupport.informarPersistenciaPendente(this);
+            }
+        });
+        jButton3.addActionListener(e -> FormSupport.limpar(jTextField1));
         jButton1.addActionListener(e -> Navigation.abrir(this, Manutenção_fases::new));
     }
 
