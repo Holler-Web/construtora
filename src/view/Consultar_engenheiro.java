@@ -15,6 +15,7 @@ public class Consultar_engenheiro extends javax.swing.JFrame {
      */
     public Consultar_engenheiro() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_engenheiros::new));
     }
 
     /**

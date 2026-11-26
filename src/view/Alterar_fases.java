@@ -13,6 +13,7 @@ public class Alterar_fases extends javax.swing.JFrame {
     /**
      * Creates new form Alterar_fases
      */
+<<<<<<< HEAD
     
 public Alterar_fases() {
     initComponents();
@@ -31,6 +32,12 @@ public Alterar_fases() {
     modelo.setRowCount(0);
 }
 
+=======
+    public Alterar_fases() {
+        initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutenção_fases::new));
+    }
+>>>>>>> e63b041ec7fa2f77c6ebd62d91e50965504b1a9e
 
     /**
      * This method is called from within the constructor to initialize the form.

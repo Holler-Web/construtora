@@ -13,6 +13,7 @@ public class Consulta_fase extends javax.swing.JFrame {
     /**
      * Creates new form Consulta_fase
      */
+<<<<<<< HEAD
     
 public Consulta_fase() {
     initComponents();
@@ -51,6 +52,12 @@ public Consulta_fase() {
     setSize(500, 350);
 }
 
+=======
+    public Consulta_fase() {
+        initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutenção_fases::new));
+    }
+>>>>>>> e63b041ec7fa2f77c6ebd62d91e50965504b1a9e
 
     /**
      * This method is called from within the constructor to initialize the form.

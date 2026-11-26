@@ -15,6 +15,7 @@ public class Excluir_engenheiro extends javax.swing.JFrame {
      */
     public Excluir_engenheiro() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_engenheiros::new));
     }
 
     /**

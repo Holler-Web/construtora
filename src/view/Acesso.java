@@ -15,6 +15,15 @@ public class Acesso extends javax.swing.JFrame {
      */
     public Acesso() {
         initComponents();
+        jTextField1.addActionListener(e -> entrar());
+        jTextField2.addActionListener(e -> entrar());
+    }
+
+    private void entrar() {
+        if (FormSupport.camposObrigatorios(this,
+                new String[]{"Usuário", "Senha"}, jTextField1, jTextField2)) {
+            Navigation.abrir(this, Telainicial::new);
+        }
     }
 
     /**

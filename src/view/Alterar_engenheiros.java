@@ -15,6 +15,7 @@ public class Alterar_engenheiros extends javax.swing.JFrame {
      */
     public Alterar_engenheiros() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_engenheiros::new));
     }
 
     /**

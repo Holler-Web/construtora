@@ -13,6 +13,7 @@ public class Manutencao_funcoes extends javax.swing.JFrame {
     /**
      * Creates new form Manutencao_funcoes
      */
+<<<<<<< HEAD
     
 public Manutencao_funcoes() {
     initComponents();
@@ -51,6 +52,16 @@ public Manutencao_funcoes() {
     });
 }
 
+=======
+    public Manutencao_funcoes() {
+        initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Incluir_funcao::new));
+        jButton2.addActionListener(e -> Navigation.abrir(this, Consultar_funcao::new));
+        jButton3.addActionListener(e -> Navigation.abrir(this, Alterar_funcao::new));
+        jButton4.addActionListener(e -> Navigation.abrir(this, Excluir_função::new));
+        jButton5.addActionListener(e -> Navigation.abrir(this, Telainicial::new));
+    }
+>>>>>>> e63b041ec7fa2f77c6ebd62d91e50965504b1a9e
 
     /**
      * This method is called from within the constructor to initialize the form.

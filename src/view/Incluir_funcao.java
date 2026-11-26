@@ -13,6 +13,7 @@ public class Incluir_funcao extends javax.swing.JFrame {
     /**
      * Creates new form Incluir_funcao
      */
+<<<<<<< HEAD
     
 public Incluir_funcao() {
     initComponents();
@@ -40,6 +41,18 @@ public Incluir_funcao() {
     });
 }
 
+=======
+    public Incluir_funcao() {
+        initComponents();
+        jButton2.addActionListener(e -> {
+            if (FormSupport.camposObrigatorios(this, new String[]{"Descrição da função"}, jTextField1)) {
+                FormSupport.informarPersistenciaPendente(this);
+            }
+        });
+        jButton3.addActionListener(e -> FormSupport.limpar(jTextField1));
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_funcoes::new));
+    }
+>>>>>>> e63b041ec7fa2f77c6ebd62d91e50965504b1a9e
 
     /**
      * This method is called from within the constructor to initialize the form.

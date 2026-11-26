@@ -15,6 +15,7 @@ public class Excluir_usuario extends javax.swing.JFrame {
      */
     public Excluir_usuario() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_usuarios::new));
     }
 
     /**

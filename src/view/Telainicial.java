@@ -14,6 +14,7 @@ public class Telainicial extends javax.swing.JFrame {
      * Creates new form Telainicial
      */
     public Telainicial() {
+<<<<<<< HEAD
     initComponents();
 
     setTitle("Sistema da Construtora");
@@ -57,6 +58,22 @@ public class Telainicial extends javax.swing.JFrame {
         }
     });
 }
+=======
+        initComponents();
+        javax.swing.JMenu menu = new javax.swing.JMenu("Cadastros complementares");
+        javax.swing.JMenuItem item = new javax.swing.JMenuItem("Obras, equipe e orçamento");
+        item.addActionListener(e -> new ComplementaryMaintenance().setVisible(true));
+        menu.add(item);
+        javax.swing.JMenuBar menuBar = new javax.swing.JMenuBar();
+        menuBar.add(menu);
+        setJMenuBar(menuBar);
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutenção_fases::new));
+        jButton2.addActionListener(e -> Navigation.abrir(this, Manutencao_engenheiros::new));
+        jButton3.addActionListener(e -> Navigation.abrir(this, Manutencao_funcoes::new));
+        jButton4.addActionListener(e -> Navigation.abrir(this, Manutencao_usuarios::new));
+        jButton5.addActionListener(e -> Navigation.abrir(this, Acesso::new));
+    }
+>>>>>>> e63b041ec7fa2f77c6ebd62d91e50965504b1a9e
 
     /**
      * This method is called from within the constructor to initialize the form.

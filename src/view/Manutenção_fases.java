@@ -14,6 +14,7 @@ public class Manutenção_fases extends javax.swing.JFrame {
      * Creates new form Manutenção_fases
      */
     public Manutenção_fases() {
+<<<<<<< HEAD
     initComponents();
 
     setTitle("Manutenção de Fases");
@@ -49,6 +50,15 @@ public class Manutenção_fases extends javax.swing.JFrame {
         this.dispose();
     });
 }
+=======
+        initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Inclusao_fase::new));
+        jButton2.addActionListener(e -> Navigation.abrir(this, Consulta_fase::new));
+        jButton3.addActionListener(e -> Navigation.abrir(this, Alterar_fases::new));
+        jButton4.addActionListener(e -> Navigation.abrir(this, Excluir_fase::new));
+        jButton5.addActionListener(e -> Navigation.abrir(this, Telainicial::new));
+    }
+>>>>>>> e63b041ec7fa2f77c6ebd62d91e50965504b1a9e
 
     /**
      * This method is called from within the constructor to initialize the form.

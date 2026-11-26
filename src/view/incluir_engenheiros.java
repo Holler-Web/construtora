@@ -15,6 +15,18 @@ public class incluir_engenheiros extends javax.swing.JFrame {
      */
     public incluir_engenheiros() {
         initComponents();
+        jButton2.addActionListener(e -> {
+            if (!FormSupport.camposObrigatorios(this,
+                    new String[]{"Nome do engenheiro", "CREA", "Data de admissão"},
+                    jTextField1, jTextField2, jTextField3)) {
+                return;
+            }
+            if (FormSupport.dataISOValida(this, "a data de admissão", jTextField3)) {
+                FormSupport.informarPersistenciaPendente(this);
+            }
+        });
+        jButton3.addActionListener(e -> FormSupport.limpar(jTextField1, jTextField2, jTextField3));
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_engenheiros::new));
     }
 
     /**

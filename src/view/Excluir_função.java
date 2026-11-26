@@ -15,6 +15,7 @@ public class Excluir_função extends javax.swing.JFrame {
      */
     public Excluir_função() {
         initComponents();
+        jButton1.addActionListener(e -> Navigation.abrir(this, Manutencao_funcoes::new));
     }
 
     /**
