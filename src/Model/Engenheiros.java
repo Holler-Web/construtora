@@ -1,18 +1,35 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Model;
+package model;
 
 
-import
-/**
- *
- * @author pedro.holler
- */
 public class Engenheiros {
-    private int idEngenheiro;
-    private String dsNome;
-    private int nrCREA;
-    private dateTime dtAdmissao;
+    private int codigo;
+    private String nome;
+    private String crea;
+    private String admissao;
+
+
+    public int getCodigo() { 
+        return codigo; 
+    }
+    public void setCodigo(int codigo) { 
+        this.codigo = codigo; 
+    }
+    public String getNome() { 
+        return nome; 
+    }
+    public void setNome(String nome) { 
+        this.nome = nome; 
+    }
+    public String getCrea() { 
+        return crea; 
+    }
+    public void setCrea(String crea) { 
+        this.crea = crea; 
+    }
+    public String getAdmissao() { 
+        return admissao; 
+    }
+    public void setAdmissao(String admissao) { 
+        this.admissao = admissao; 
+    }
 }

@@ -14,8 +14,40 @@ public class Inclusao_fase extends javax.swing.JFrame {
      * Creates new form Inclusao_fase
      */
     public Inclusao_fase() {
-        initComponents();
-    }
+    initComponents();
+
+    setTitle("Inclusão de Fases");
+    setLocationRelativeTo(null);
+
+    // Botão Incluir
+    jButton2.addActionListener(e -> {
+        String descricao = jTextField1.getText().trim();
+
+        if (descricao.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(
+                this,
+                "Informe a descrição da fase."
+            );
+            return;
+        }
+
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "A inclusão da fase será conectada ao banco de dados na próxima etapa."
+        );
+    });
+
+    // Botão Limpar
+    jButton3.addActionListener(e -> {
+        jTextField1.setText("");
+    });
+
+    // Botão Voltar
+    jButton1.addActionListener(e -> {
+        new Manutenção_fases().setVisible(true);
+        this.dispose();
+    });
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

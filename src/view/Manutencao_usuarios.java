@@ -13,9 +13,44 @@ public class Manutencao_usuarios extends javax.swing.JFrame {
     /**
      * Creates new form Manutencao_usuarios
      */
-    public Manutencao_usuarios() {
-        initComponents();
-    }
+    
+public Manutencao_usuarios() {
+    initComponents();
+
+    setTitle("Manutenção de Usuários");
+    setLocationRelativeTo(null);
+
+    // BOTÃO 1 - INCLUIR USUÁRIO
+    jButton1.addActionListener(e -> {
+        new Incluir_usuario().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 2 - CONSULTAR USUÁRIO
+    jButton2.addActionListener(e -> {
+        new Consultar_usuario().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 3 - ALTERAR USUÁRIO
+    jButton3.addActionListener(e -> {
+        new Alterar_usuario().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 4 - EXCLUIR USUÁRIO
+    jButton4.addActionListener(e -> {
+        new Excluir_usuario().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 5 - VOLTAR AO MENU
+    jButton5.addActionListener(e -> {
+        new Telainicial().setVisible(true);
+        this.dispose();
+    });
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.

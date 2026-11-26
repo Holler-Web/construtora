@@ -14,8 +14,49 @@ public class Telainicial extends javax.swing.JFrame {
      * Creates new form Telainicial
      */
     public Telainicial() {
-        initComponents();
-    }
+    initComponents();
+
+    setTitle("Sistema da Construtora");
+    setLocationRelativeTo(null);
+
+    // BOTÃO 1 - MANUTENÇÃO DE FASES
+    jButton1.addActionListener(e -> {
+        new Manutenção_fases().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 2 - MANUTENÇÃO DE ENGENHEIROS
+    jButton2.addActionListener(e -> {
+        new Manutencao_engenheiros().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 3 - MANUTENÇÃO DE FUNÇÕES
+    jButton3.addActionListener(e -> {
+        new Manutencao_funcoes().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 4 - MANUTENÇÃO DE USUÁRIOS
+    jButton4.addActionListener(e -> {
+        new Manutencao_usuarios().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 5 - SAIR
+    jButton5.addActionListener(e -> {
+        int resposta = javax.swing.JOptionPane.showConfirmDialog(
+            this,
+            "Deseja realmente sair?",
+            "Sair",
+            javax.swing.JOptionPane.YES_NO_OPTION
+        );
+
+        if (resposta == javax.swing.JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    });
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

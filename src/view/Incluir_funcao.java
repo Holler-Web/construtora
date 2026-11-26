@@ -13,9 +13,33 @@ public class Incluir_funcao extends javax.swing.JFrame {
     /**
      * Creates new form Incluir_funcao
      */
-    public Incluir_funcao() {
-        initComponents();
-    }
+    
+public Incluir_funcao() {
+    initComponents();
+
+    setTitle("Inclusão de Funções");
+    setLocationRelativeTo(null);
+
+    // BOTÃO INCLUIR
+    jButton2.addActionListener(e -> {
+        javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "A inclusão será conectada ao banco de dados na próxima etapa."
+        );
+    });
+
+    // BOTÃO LIMPAR
+    jButton3.addActionListener(e -> {
+        jTextField1.setText("");
+    });
+
+    // BOTÃO VOLTAR
+    jButton1.addActionListener(e -> {
+        new Manutencao_funcoes().setVisible(true);
+        this.dispose();
+    });
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.

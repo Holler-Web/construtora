@@ -13,9 +13,44 @@ public class Consulta_fase extends javax.swing.JFrame {
     /**
      * Creates new form Consulta_fase
      */
-    public Consulta_fase() {
-        initComponents();
-    }
+    
+public Consulta_fase() {
+    initComponents();
+
+    setTitle("Consulta de Fases");
+    setLocationRelativeTo(null);
+
+    javax.swing.JTable tabela = new javax.swing.JTable(
+        new javax.swing.table.DefaultTableModel(
+            new Object[][] {},
+            new String[] {"Código", "Descrição"}
+        )
+    );
+
+    javax.swing.JScrollPane rolagem =
+        new javax.swing.JScrollPane(tabela);
+
+    javax.swing.JPanel painel =
+        new javax.swing.JPanel(new java.awt.BorderLayout(10, 10));
+
+    painel.setBorder(
+        javax.swing.BorderFactory.createEmptyBorder(15, 15, 15, 15)
+    );
+
+    painel.add(jLabel1, java.awt.BorderLayout.NORTH);
+    painel.add(rolagem, java.awt.BorderLayout.CENTER);
+    painel.add(jButton1, java.awt.BorderLayout.SOUTH);
+
+    setContentPane(painel);
+
+    jButton1.addActionListener(e -> {
+        new Manutenção_fases().setVisible(true);
+        this.dispose();
+    });
+
+    setSize(500, 350);
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.

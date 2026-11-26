@@ -13,9 +13,44 @@ public class Manutencao_engenheiros extends javax.swing.JFrame {
     /**
      * Creates new form Manutencao_engenheiros
      */
-    public Manutencao_engenheiros() {
-        initComponents();
-    }
+  
+public Manutencao_engenheiros() {
+    initComponents();
+
+    setTitle("Manutenção de Engenheiros");
+    setLocationRelativeTo(null);
+
+    // BOTÃO 1 - INCLUIR ENGENHEIRO
+    jButton1.addActionListener(e -> {
+        new incluir_engenheiros().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 2 - CONSULTAR ENGENHEIRO
+    jButton2.addActionListener(e -> {
+        new Consultar_engenheiro().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 3 - ALTERAR ENGENHEIRO
+    jButton3.addActionListener(e -> {
+        new Alterar_engenheiros().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 4 - EXCLUIR ENGENHEIRO
+    jButton4.addActionListener(e -> {
+        new Excluir_engenheiro().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 5 - VOLTAR
+    jButton5.addActionListener(e -> {
+        new Telainicial().setVisible(true);
+        this.dispose();
+    });
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.

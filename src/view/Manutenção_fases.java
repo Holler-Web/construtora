@@ -14,8 +14,41 @@ public class Manutenção_fases extends javax.swing.JFrame {
      * Creates new form Manutenção_fases
      */
     public Manutenção_fases() {
-        initComponents();
-    }
+    initComponents();
+
+    setTitle("Manutenção de Fases");
+    setLocationRelativeTo(null);
+
+    // BOTÃO 1 - INCLUIR FASE
+    jButton1.addActionListener(e -> {
+        new Inclusao_fase().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 2 - CONSULTAR FASE
+    jButton2.addActionListener(e -> {
+        new Consulta_fase().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 3 - ALTERAR FASE
+    jButton3.addActionListener(e -> {
+        new Alterar_fases().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 4 - EXCLUIR FASE
+    jButton4.addActionListener(e -> {
+        new Excluir_fase().setVisible(true);
+        this.dispose();
+    });
+
+    // BOTÃO 5 - FECHAR
+    jButton5.addActionListener(e -> {
+        new Telainicial().setVisible(true);
+        this.dispose();
+    });
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,6 +75,11 @@ public class Manutenção_fases extends javax.swing.JFrame {
         jButton1.setText("Inclui Fase");
 
         jButton2.setText("Consulta Fase");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Altera Fase");
 
@@ -104,6 +142,10 @@ public class Manutenção_fases extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
